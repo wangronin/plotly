@@ -101,8 +101,9 @@ orca <- function(p, file = "plot.png", format = tools::file_ext(file),
   if (isTRUE(mathjax)) args <- c(args, "--mathjax", file.path(mathjax_path(), "MathJax.js"))
   
   # TODO: point to local topojson? Should this only work if plot_geo(standalone = TRUE)?
-  try_library("processx", "orca")
-  invisible(processx::run("orca", args, echo = TRUE, spinner = TRUE, ...))
+  # try_library("processx", "orca")
+  # invisible(processx::run("orca", args, echo = TRUE, spinner = TRUE, ...))
+  system(paste('orca', paste(args, collapse = ' ')))
 }
 
 #' Orca image export server
