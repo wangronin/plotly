@@ -67,7 +67,7 @@ orca <- function(p, file = "plot.png", format = tools::file_ext(file),
                  parallel_limit = NULL, verbose = FALSE, debug = FALSE, 
                  safe = FALSE, more_args = NULL, ...) {
   
-  orca_available()
+  # orca_available()
   
   b <- plotly_build(p)
   
